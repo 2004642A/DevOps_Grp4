@@ -64,11 +64,11 @@ public class UserServlet extends HttpServlet {
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "password";
 
-	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (name, password, email, language) VALUES " + " (?, ?, ?);";
-	private static final String SELECT_USER_BY_ID = "select name,password,email,language from UserDetails where name =?";
-	private static final String SELECT_ALL_USERS = "select * from UserDetails ";
-	private static final String DELETE_USERS_SQL = "delete from UserDetails where name = ?;";
-	private static final String UPDATE_USERS_SQL = "update UserDetails set name = ?,password= ?, email =?,language =? where name = ?;";
+	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetail" + " (name, password, email, language) VALUES " + " (?, ?, ?);";
+	private static final String SELECT_USER_BY_ID = "select name,password,email,language from UserDetail where name =?";
+	private static final String SELECT_ALL_USERS = "select * from UserDetail ";
+	private static final String DELETE_USERS_SQL = "delete from UserDetail where name = ?;";
+	private static final String UPDATE_USERS_SQL = "update UserDetail set name = ?,password= ?, email =?,language =? where name = ?;";
 
 	protected Connection getConnection() {
 		Connection connection = null;
