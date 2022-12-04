@@ -30,7 +30,7 @@ success">Add New User</a>
 						<th>Name</th>
 						<th>Password</th>
 						<th>Email</th>
-						<th>Contact</th>
+						<th>Language</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
@@ -44,14 +44,12 @@ information accordingly -->
 							<td><c:out value="${user.name}" /></td>
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
-							<td><c:out value="${user.contact}" /></td>
+							<td><c:out value="${user.language}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
 							<td><a href="edit?name=<c:out value='${user.name}'
 />">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out
-value='${user.name}' />">Delete</a></td>
+							<a href="delete?name=<c:out value='${user.name}'/>">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -60,5 +58,3 @@ value='${user.name}' />">Delete</a></td>
 	</div>
 </body>
 </html>
-
-
