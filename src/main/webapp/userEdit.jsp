@@ -69,7 +69,7 @@ value='${user.email}' />" class="form-control"
 					<label> Contact</label> <input type="text"
 						value="<c:out
 value='${user.contact}' />" class="form-control"
-						name="language">
+						name="contact">
 				</fieldset>
 				<button type="submit" class="btn btn-success">Save</button>
 				</form>
