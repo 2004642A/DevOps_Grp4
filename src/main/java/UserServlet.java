@@ -1,3 +1,4 @@
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -64,11 +65,11 @@ public class UserServlet extends HttpServlet {
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "password";
 
-	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (name, password, email, language) VALUES " + " (?, ?, ?);";
-	private static final String SELECT_USER_BY_ID = "select name,password,email,language from UserDetails where name =?";
-	private static final String SELECT_ALL_USERS = "select * from UserDetails ";
-	private static final String DELETE_USERS_SQL = "delete from UserDetails where name = ?;";
-	private static final String UPDATE_USERS_SQL = "update UserDetails set name = ?,password= ?, email =?,language =? where name = ?;";
+	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetail" + " (name, password, email, contact) VALUES " + " (?, ?, ?);";
+	private static final String SELECT_USER_BY_ID = "select name,password,email,contact from UserDetail where name =?";
+	private static final String SELECT_ALL_USERS = "select * from UserDetail ";
+	private static final String DELETE_USERS_SQL = "delete from UserDetail where name = ?;";
+	private static final String UPDATE_USERS_SQL = "update UserDetail set name = ?,password= ?, email =?,contact =? where name = ?;";
 
 	protected Connection getConnection() {
 		Connection connection = null;
@@ -95,8 +96,8 @@ public class UserServlet extends HttpServlet {
 				String name = rs.getString("name");
 				String password = rs.getString("password");
 				String email = rs.getString("email");
-				String language = rs.getString("language");
-				users.add(new User(name, password, email, language));
+				String contact = rs.getString("contact");
+				users.add(new User(name, password, email, contact));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -119,8 +120,8 @@ public class UserServlet extends HttpServlet {
 				name = rs.getString("name");
 				String password = rs.getString("password");
 				String email = rs.getString("email");
-				String language = rs.getString("language");
-				existingUser = new User(name, password, email, language);
+				String contact = rs.getString("contact");
+				existingUser = new User(name, password, email, contact);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -135,17 +136,17 @@ public class UserServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
-		String language = request.getParameter("language");
+		String contact = request.getParameter("contact");
 		try (Connection connection = getConnection(); PreparedStatement statement =
 				connection.prepareStatement(UPDATE_USERS_SQL);) {
 				statement.setString(1, name);
 				statement.setString(2, password);
 				statement.setString(3, email);
-				statement.setString(4, language);
+				statement.setString(4, contact);
 				statement.setString(5, oriName);
 				int i = statement.executeUpdate();
 				}
-		response.sendRedirect("http://localhost:8090/HelloWorldJavaEE/UserServlet/dashboard");
+		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/UserServlet/dashboard");
 	}
 	
 	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
@@ -156,6 +157,6 @@ public class UserServlet extends HttpServlet {
 				statement.setString(1, name);
 				int i = statement.executeUpdate();
 				}
-		response.sendRedirect("http://localhost:8090/HelloWorldJavaEE/UserServlet/dashboard");
+		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/UserServlet/dashboard");
 	}	
 }

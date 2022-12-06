@@ -14,13 +14,13 @@
 <body>
 	<div class="row">
 		<div class="container">
-			<h3 class="text-center">List of Users</h3>
+			<h3 class="text-center">List of Products</h3>
 			<hr>
 			<div class="container text-left">
 				<!-- Add new user button redirects to the register.jsp page -->
-				<a href="<%=request.getContextPath()%>/register.jsp"
+				<a href="<%=request.getContextPath()%>/addProduct.jsp"
 					class="btn btn-
-success">Add New User</a>
+success">Add New Product</a>
 			</div>
 			<br>
 			<!-- Create a table to list out all current users information -->
@@ -28,30 +28,30 @@ success">Add New User</a>
 				<thead>
 					<tr>
 						<th>Name</th>
-						<th>Password</th>
-						<th>Email</th>
-						<th>Contact</th>
+						<th>Category</th>
+						<th>Price</th>
+						<th>Image link</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<!-- Pass in the list of users receive via the Servlet’s response to a loop
 -->
 				<tbody>
-					<c:forEach var="user" items="${listUsers}">
+					<c:forEach var="product" items="${listProducts}">
 						<!-- For each user in the database, display their
 information accordingly -->
 						<tr>
-							<td><c:out value="${user.name}" /></td>
-							<td><c:out value="${user.password}" /></td>
-							<td><c:out value="${user.email}" /></td>
-							<td><c:out value="${user.contact}" /></td>
+							<td><c:out value="${product.name}" /></td>
+							<td><c:out value="${product.category}" /></td>
+							<td><c:out value="${product.price}" /></td>
+							<td><img src="${product.image}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-							<td><a href="edit?name=<c:out value='${user.name}'
+							<td><a href="edit?name=<c:out value='${product.name}'
 />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="delete?name=<c:out
-value='${user.name}' />">Delete</a></td>
+value='${product.name}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -61,4 +61,3 @@ value='${user.name}' />">Delete</a></td>
 </body>
 </html>
 
-</html>
