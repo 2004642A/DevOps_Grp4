@@ -19,5 +19,6 @@ Etc.) -->
 <input type="submit" value="Manage Users"/>
 </form>
 
+<div class = "card-header my-3"> All Products</div>
 </body>
 </html>
