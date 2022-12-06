@@ -27,27 +27,6 @@ Etc.) -->
 	</form>
 	
 
-
-	<div class="container">
-		<div class="card-header my-3">All Products</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card w-100" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
-					<div class="card-body">
-						<h5 class="name">${product.name}</h5>
-						<h6 class="price">Price: $</h6>
-						<h6 class="category">Category: some category</h6>
-						<div class="mt-3 d-flex justify-content-between">
-							<a href="#" class="btn btn-primary">Add to Cart</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
 	
 	
 </body>
