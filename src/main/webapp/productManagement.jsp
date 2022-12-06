@@ -44,7 +44,7 @@ information accordingly -->
 							<td><c:out value="${product.name}" /></td>
 							<td><c:out value="${product.category}" /></td>
 							<td><c:out value="${product.price}" /></td>
-							<td><c:out value="${product.image}" /></td>
+							<td><img src="${product.image}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
 							<td><a href="edit?name=<c:out value='${product.name}'
