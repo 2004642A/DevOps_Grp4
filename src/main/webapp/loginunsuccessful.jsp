@@ -8,6 +8,6 @@
 </head>
 <body>
 <p>Login failed!</p>
-<a href=login.jsp></a>
+<a href=login.jsp>Try again!</a>
 </body>
 </html>

@@ -20,4 +20,5 @@ public class Login implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    //
 }
