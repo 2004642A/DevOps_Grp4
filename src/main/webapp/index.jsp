@@ -12,7 +12,7 @@
 the form is submitted, method attribute to specific the method used (GET, POST, PUT, DELETE,
 Etc.) -->
 
-<form action="register.jsp" method="post">
+<form action="registerpage.jsp" method="post">
 <input type="submit" value="Sign up"/>
 </form>
 <form action="UserServlet/dashboard" method="post">
