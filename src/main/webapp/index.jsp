@@ -22,10 +22,12 @@ Etc.) -->
 	<form action="UserServlet/dashboard" method="post">
 		<input type="submit" value="Manage Users" />
 	</form>
-	<form action="ProductServlet" method="post">
-		<input type="submit" value="All Products" />
+	<form action="AllProductsServlet" method="post">
+		<input type="submit" value="All Products for Customers" />
 	</form>
-	
+	<form action="ProductServlet" method="post">
+		<input type="submit" value="Manage Products for Admin" />
+	</form>
 
 	
 	
