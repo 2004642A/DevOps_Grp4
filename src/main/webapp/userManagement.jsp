@@ -18,7 +18,7 @@
 			<hr>
 			<div class="container text-left">
 				<!-- Add new user button redirects to the register.jsp page -->
-				<a href="<%=request.getContextPath()%>/register.jsp"
+				<a href="<%=request.getContextPath()%>/registerpage.jsp"
 					class="btn btn-
 success">Add New User</a>
 			</div>
