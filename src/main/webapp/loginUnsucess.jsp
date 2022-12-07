@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+ <div align="center">
 <p>Login failed!</p>
 <a href=login.jsp>Try again!</a>
+</div>
 </body>
 </html>
