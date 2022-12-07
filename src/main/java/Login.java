@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Login1 implements Serializable {
+public class Login implements Serializable {
 
 		private static final long serialVersionUID = 1L;
 	    private String name;
@@ -34,7 +34,7 @@ public class Login1 implements Serializable {
 		public void setContact(String contact) {
 			this.contact = contact;
 		}
-		public Login1(String name, String password, String email, String contact) {
+		public Login(String name, String password, String email, String contact) {
 			super();
 			this.name = name;
 			this.password = password;

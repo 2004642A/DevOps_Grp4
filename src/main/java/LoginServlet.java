@@ -15,10 +15,10 @@ import javax.servlet.RequestDispatcher;
 
 
 @WebServlet("/LoginServlet1")
-public class LoginServlet1 extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public LoginServlet1() {
+	public LoginServlet() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class LoginServlet1 extends HttpServlet {
                 rd.forward(request, response);
                 //listUser(request, response);
             } else {
-            	RequestDispatcher rd=request.getRequestDispatcher("loginunsuccessful.jsp");
+            	RequestDispatcher rd=request.getRequestDispatcher("loginUnsucessful.jsp");
                 rd.forward(request, response);
             }
 		}
