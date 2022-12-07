@@ -22,7 +22,7 @@ Etc.) -->
 	<form action="UserServlet/dashboard" method="post">
 		<input type="submit" value="Manage Users" />
 	</form>
-	<form action="AllProductsServlet" method="post">
+	<form action="ProductServlet" method="post">
 		<input type="submit" value="All Products" />
 	</form>
 	
