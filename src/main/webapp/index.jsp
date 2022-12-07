@@ -19,6 +19,9 @@ Etc.) -->
 	<form action="registerpage.jsp" method="post">
 		<input type="submit" value="Sign up" />
 	</form>
+	<form action="login.jsp" method="post">
+		<input type="submit" value="Log in" />
+	</form>
 	<form action="UserServlet/dashboard" method="post">
 		<input type="submit" value="Manage Users" />
 	</form>
