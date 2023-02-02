@@ -39,11 +39,11 @@ public class ProductServlet extends HttpServlet {
 				String action = request.getServletPath();
 				try {
 					switch (action) {
-					case "./deleteproduct": deleteProduct(request, response);
+					case "/ProductServlet/delete": deleteProduct(request, response);
 					break;
-					case "./editproduct": showProductForm(request, response);
+					case "/ProductServlet/edit": showProductForm(request, response);
 					break;
-					case "./updateproduct": updateProduct(request, response);
+					case "/ProductServlet/update": updateProduct(request, response);
 					break;
 					case "/ProductServlet/insert": insertProduct(request, response);
 					break;
@@ -85,6 +85,8 @@ public class ProductServlet extends HttpServlet {
 		}
 		return connection;
 	}
+	
+	
 	private void insertProduct(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException {
 		String name = request.getParameter("productname");
@@ -96,7 +98,7 @@ public class ProductServlet extends HttpServlet {
 
 		try (Connection connection = getConnection(); 
 				PreparedStatement statement =
-						connection.prepareStatement("insert into Producttable values(?,?,?,?)");) {
+						connection.prepareStatement(INSERT_USERS_SQL);) {
 			statement.setString(1, name);
 			statement.setString(2, category);
 			statement.setDouble(3, price);
@@ -113,7 +115,7 @@ public class ProductServlet extends HttpServlet {
 			System.out.println(e.getMessage());
 		
 		}
-		//		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet");
+				response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet");
 	}
 
 

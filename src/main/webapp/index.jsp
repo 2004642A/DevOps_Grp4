@@ -25,7 +25,9 @@ Etc.) -->
 	<form action="AllProductsServlet" method="post">
 		<input type="submit" value="All Products" />
 	</form>
-	
+	<form action="ProductServlet" method="post">
+		<input type="submit" value="Manage Products for Admin" />
+	</form>
 
 	
 	
