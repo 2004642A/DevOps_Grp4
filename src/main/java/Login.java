@@ -7,7 +7,7 @@ public class Login implements Serializable {
 	    private String password;
 	    private String email;
 	    private String contact;
-
+	    
 	    public String getName() {
 	        return name;
 	    }
