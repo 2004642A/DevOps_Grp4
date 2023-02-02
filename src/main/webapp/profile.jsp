@@ -1,50 +1,61 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+	 <title>Profile</title>
+	 <style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.profile-card {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+}
+
+.profile-card h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.profile-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.profile-info li {
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-info li:last-child {
+    border-bottom: none;
+}
+</style>
 </head>
 <body>
-<div class="row">
-		<div class="container">
-			<h3 class="text-center">Profile</h3>
-			<hr>
- <div align="center">
-  <h4>You have logined successfully!</h4>
- </div>
-			<!---<br>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Password</th>
-						<th>Email</th>
-						<th>Language</th>
-						<th>Actions</th>
-					</tr>
-				</thead>
-	
-				<tbody>
-					<c:forEach var="login" items="${listUser}">
-						<tr>
-							<td><c:out value="${login.name}" /></td>
-							<td><c:out value="${login.password}" /></td>
-							<td><c:out value="${login.email}" /></td>
-							<td><c:out value="${login.contact}" /></td>
-							<td><a href="edit?name=<c:out value='${login.name}'/>">Edit</a>
-							<a href="delete?name=<c:out value='${login.name}'/>">Delete</a></td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>-->
-		</div>
-</div>
+ <div class="profile-card">
+        <h1>Welcome, <%= request.getSession().getAttribute("name") %>!</h1>
+        <div class="profile-info">
+            <ul>
+                <li>Username: <%= request.getSession().getAttribute("name") %></li>
+                <li>Email: <%= request.getAttribute("email") %></li>
+                <li>Contact no: <%= request.getAttribute("contact") %></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
