@@ -100,7 +100,7 @@ public class AllProductsServlet extends HttpServlet {
 
 		}
 		request.setAttribute("listProducts", allproducts);
-		request.getRequestDispatcher("/allproducts.jsp").forward(request, response);
+		request.getRequestDispatcher("/allproduct.jsp").forward(request, response);
 	}
 	
 	
