@@ -31,9 +31,6 @@ public class ProfileServlet extends HttpServlet {
 		session.setAttribute("name", name);
 		session.setAttribute("password", password);
 		Connection conn = null;
-		String jdbcURL = "jdbc:mysql://localhost:3306/userdetails";
-		String jdbcUsername = "root";
-		String jdbcPassword = "password";
 		
 		try{
 			 Class.forName("com.mysql.cj.jdbc.Driver");
