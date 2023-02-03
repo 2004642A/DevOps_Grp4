@@ -49,9 +49,7 @@ information accordingly -->
 buttons which invokes the edit/delete functions -->
 							<td><a href="edit?name=<c:out value='${user.name}'
 />">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out
-value='${user.name}' />">Delete</a></td>
+							<a href="delete?name=<c:out value='${user.name}'/>">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -59,6 +57,4 @@ value='${user.name}' />">Delete</a></td>
 		</div>
 	</div>
 </body>
-</html>
-
 </html>
