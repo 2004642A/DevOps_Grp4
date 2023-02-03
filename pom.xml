@@ -7,7 +7,7 @@
   <name>Testing 2</name>
   <description>Test Project</description>
 
-  <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
+  <!--<selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
   <selenium.artifactId>selenium-java</selenium.artifactId>
   <selenium.version>2.53.1</selenium.version>
   
