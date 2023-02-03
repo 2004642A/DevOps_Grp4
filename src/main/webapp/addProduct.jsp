@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Product and its Details</title>
+<title>Add Product and its Details amend it again lessgo</title>
 </head>
 <body>
     <form action="AddProductServlet" method="post">
