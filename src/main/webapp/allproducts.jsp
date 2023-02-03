@@ -38,6 +38,11 @@
 								<div class="mt-3 d-flex justify-content-between">
 									<a href="#" class="btn btn-primary">Add to Cart</a>
 								</div>
+								<!--  <form action="addToCart" method="post">
+                        <input type="hidden" name="name" value="$ ${product.name} " />
+                        <input type="hidden" name="price" value="$ ${product.price}" />
+                       <input type="submit" value="Cart" />
+                 </form>-->
 							</div>
 						</div>
 					</div>
