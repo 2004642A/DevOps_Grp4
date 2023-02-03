@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,14 +37,9 @@ public class AllProductsServlet extends HttpServlet {
 				String action = request.getServletPath();
 				try {
 					switch (action) {
-					case "./deleteproduct": deleteProduct(request, response);
-					break;
-					case "./editproduct": showProductForm(request, response);
-					break;
-					case "./updateproduct": updateProduct(request, response);
-					break;
-					case "/AllProductsServlet/insert": insertProduct(request, response);
-					break;
+					
+					
+					
 					default:
 						listProduct(request, response);
 						break;
@@ -66,11 +59,8 @@ public class AllProductsServlet extends HttpServlet {
 	private String jdbcURL = "jdbc:mysql://localhost:3306/userdetails";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "password";
-	private static final String INSERT_USERS_SQL = "insert into Producttable values(?,?,?,?)";
-	private static final String SELECT_USER_BY_ID = "select name,category,price,image from Producttable where name =?";
 	private static final String SELECT_ALL_PRODUCTS = "select * from Producttable ";
-	private static final String DELETE_USERS_SQL = "delete from Producttable where name = ?;";
-	private static final String UPDATE_USERS_SQL = "update Producttable set name = ?,category= ?, price =?,image =? where name = ?;";
+	
 	
 	
 	protected Connection getConnection() {
@@ -85,36 +75,7 @@ public class AllProductsServlet extends HttpServlet {
 		}
 		return connection;
 	}
-	private void insertProduct(HttpServletRequest request, HttpServletResponse response)
-			throws SQLException, IOException {
-		String name = request.getParameter("productname");
-		String category = request.getParameter("category");
-		Double price = Double.parseDouble(request.getParameter("price"));
-		String image = request.getParameter("image");
-
-
-
-		try (Connection connection = getConnection(); 
-				PreparedStatement statement =
-						connection.prepareStatement("insert into Producttable values(?,?,?,?)");) {
-			statement.setString(1, name);
-			statement.setString(2, category);
-			statement.setDouble(3, price);
-			statement.setString(4, image);
-			int i = statement.executeUpdate();
-
-			if (i > 0){
-				PrintWriter writer = response.getWriter();
-				writer.println("<h1>" + "You have successfully added a new product!" +
-						"</h1>");
-				writer.close();
-			}
-		}catch (SQLException e) {
-			System.out.println(e.getMessage());
-		
-		}
-		//		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet");
-	}
+	
 
 
 
@@ -143,64 +104,10 @@ public class AllProductsServlet extends HttpServlet {
 	}
 	
 	
-	
-
-	private void showProductForm(HttpServletRequest request, HttpServletResponse response)
-			throws SQLException, ServletException, IOException 
-	{
-		String name = request.getParameter("name");
-		AllProduct existingProduct = new AllProduct("", "", null, "");
-		try (Connection connection = getConnection();
-				PreparedStatement preparedStatement =
-						connection.prepareStatement(SELECT_USER_BY_ID);) {
-			preparedStatement.setString(1, name);
-			ResultSet rs = preparedStatement.executeQuery();
-			while (rs.next()) {
-				name = rs.getString("name");
-				String category = rs.getString("category");
-				Double price = rs.getDouble("price");
-				String image = rs.getString("image");
-				existingProduct = new AllProduct(name, category, price, image);
-			}
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		request.setAttribute("user", existingProduct);
-		request.getRequestDispatcher("/productEdit.jsp").forward(request, response);
-	}
-	
-	
-
-	private void updateProduct(HttpServletRequest request, HttpServletResponse response)
-			throws SQLException, IOException {
-		String oriName = request.getParameter("oriName");
-		String name = request.getParameter("name");
-		String category = request.getParameter("category");
-		Double price = Double.parseDouble(request.getParameter("price"));
-		String image = request.getParameter("image");
-		try (Connection connection = getConnection(); PreparedStatement statement =
-				connection.prepareStatement(UPDATE_USERS_SQL);) {
-			statement.setString(1, name);
-			statement.setString(2, category);
-			statement.setDouble(3, price);
-			statement.setString(4, image);
-			statement.setString(5, oriName);
-			int i = statement.executeUpdate();
-		}
-		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/AllProductsServlet/dashboard");
-	}
 
 	
+
 	
-	private void deleteProduct(HttpServletRequest request, HttpServletResponse response)
-			throws SQLException, IOException {
-		String name = request.getParameter("name");
-		try (Connection connection = getConnection(); PreparedStatement statement =
-				connection.prepareStatement(DELETE_USERS_SQL);) {
-			statement.setString(1, name);
-			int i = statement.executeUpdate();
-		}
-		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/AllProductsServlet/dashboard");
-	}	
 }
+
 
