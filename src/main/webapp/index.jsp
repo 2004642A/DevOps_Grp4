@@ -16,6 +16,21 @@
 the form is submitted, method attribute to specific the method used (GET, POST, PUT, DELETE,
 Etc.) -->
 
+	<form action="registerpage.jsp" method="post">
+		<input type="submit" value="Sign up" />
+	</form>
+	<form action="login.jsp" method="post">
+		<input type="submit" value="Log in" />
+	</form>
+	<form action="UserServlet/dashboard" method="post">
+		<input type="submit" value="Manage Users" />
+	</form>
+	<form action="AllProductsServlet" method="post">
+		<input type="submit" value="All Products for Customers" />
+	</form>
+	<form action="ProductServlet" method="post">
+		<input type="submit" value="Manage Products for Admin" />
+	</form>
 
 	
 </body>
