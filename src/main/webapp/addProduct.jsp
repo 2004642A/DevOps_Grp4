@@ -7,12 +7,12 @@
 <title>Add Product and its Details</title>
 </head>
 <body>
-    <form action="./ProductServlet/insert" method="post">
-        Name: <input type="text" name="productname"> 
-        Category: <input type="text" name="category"> 
-        Price: <input type="number" name="price"> 
-        Image link: <input type="text" name="image">
-        <input type="submit" value="Add Product" />
+    <form action="AddProductServlet" method="post">
+        Name: <input type="text" name="productname" id="name"> 
+        Category: <input type="text" name="category" id="category"> 
+        Price: <input type="number" name="price" id="price"> 
+        Image link: <input type="text" name="image" id="image">
+        <input type="submit" value="Add Product" id="submit"/>
     </form>
 
 </body>

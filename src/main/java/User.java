@@ -28,7 +28,7 @@ public class User {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
-	public User(String name, String password, String email, String contact) {
+	public User(String name, String password, String contact, String email) {
 		super();
 		this.name = name;
 		this.password = password;
