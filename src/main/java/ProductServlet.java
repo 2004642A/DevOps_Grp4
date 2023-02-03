@@ -167,8 +167,8 @@ public class ProductServlet extends HttpServlet {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		request.setAttribute("user", existingProduct);
-		request.getRequestDispatcher("/productEdit.jsp").forward(request, response);
+		request.setAttribute("product", existingProduct);
+		request.getRequestDispatcher("/editProductForm.jsp").forward(request, response);
 	}
 	
 	
@@ -189,7 +189,7 @@ public class ProductServlet extends HttpServlet {
 			statement.setString(5, oriName);
 			int i = statement.executeUpdate();
 		}
-		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet/dashboard");
+		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet");
 	}
 
 	
@@ -202,7 +202,7 @@ public class ProductServlet extends HttpServlet {
 			statement.setString(1, name);
 			int i = statement.executeUpdate();
 		}
-		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet/dashboard");
+		response.sendRedirect("http://localhost:8090/DevOps_eCommerce/ProductServlet");
 	}	
 }
 

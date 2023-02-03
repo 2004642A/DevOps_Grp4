@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Products List for Admin</title>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
 				<!-- Add new user button redirects to the register.jsp page -->
 				<a href="<%=request.getContextPath()%>/addProduct.jsp"
 					class="btn btn-
-success">Add New Product</a>
+success" id="addnew">Add New Product</a>
 			</div>
 			<br>
 			<!-- Create a table to list out all current users information -->
@@ -47,10 +47,10 @@ information accordingly -->
 							<td><img src="${product.image}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-							<td><a href="edit?name=<c:out value='${product.name}'
+							<td><a href="./ProductServlet/edit?name=<c:out value='${product.name}'
 />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out
+								href="./ProductServlet/delete?name=<c:out
 value='${product.name}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
