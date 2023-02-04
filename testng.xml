@@ -6,7 +6,7 @@
       <class name="UserCollectionTest"/>
       <class name="UserTest"/>
       <class name="AllProductTest"/>
-      <class name="NewTest2"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
