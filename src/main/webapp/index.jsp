@@ -32,6 +32,5 @@ Etc.) -->
         <input type="submit" value="Manage Products for Admin" />
     </form>
 
-    
 </body>
 </html>
