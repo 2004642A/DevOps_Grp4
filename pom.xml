@@ -16,7 +16,7 @@
   <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
   <junit-jupiter.version>5.7.0</junit-jupiter.version>
   
-  <!--additional dependencies-->
+
   <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
   <selenium.artifactId>selenium-java</selenium.artifactId>
   <selenium.version>2.53.1</selenium.version>
@@ -63,20 +63,18 @@
      <scope>test</scope>
    </dependency>
    
-   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
    <dependency>
      <groupId>org.seleniumhq.selenium</groupId>
      <artifactId>selenium-java</artifactId>
      <version>3.141.59</version>
-   </dependency>
 
-   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
    <dependency>
      <groupId>org.testng</groupId>
      <artifactId>testng</artifactId>
      <version>7.0.0</version>
      <scope>test</scope>
-   </dependency>
+
    
    </dependencies>
  
@@ -97,13 +95,7 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.1</version>
-        <configuration>
-        <suiteXmlFiles>
-             <suiteXmlFile>testng.xml
-        </suiteXmlFile></suiteXmlFiles>
-        </configuration>
-      </plugin>	
-      	
+
     </plugins>
   </build>
 </project>
