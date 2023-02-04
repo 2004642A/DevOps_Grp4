@@ -31,6 +31,15 @@ public class UserCollection {
 			 }
 			return false;
 		}
+		
+		public void deleteUserByName(List<User> users, String name) {
+		    for (int i = 0; i < users.size(); i++) {
+		      if (users.get(i).getName().equals(name)) {
+		        users.remove(i);
+		        break;
+		      }
+		    }
+		}
 	  
 
 
