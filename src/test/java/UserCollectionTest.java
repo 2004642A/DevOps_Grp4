@@ -51,8 +51,18 @@ class UserCollectionTest {
 		assertEquals("james123@gmail.com", updatedUser.getEmail());
 		assertEquals("5678954", updatedUser.getContact());
 	
+		
 	}
-
+	
+	@Test
+	 void testDeleteUserByName() {
+	    List<User> users = uc.getUsers();
+	    assertEquals("James", users.get(0).getName());
+	    uc.deleteUserByName(users, "James");
+	   
+	  }
+	
+	
 	public User getUserByName(List<User> testUc, String name) {
 		// TODO Auto-generated method stub
 		 for (User user : testUc) {
