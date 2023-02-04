@@ -45,7 +45,7 @@ public class NewTest {
 	  
 	  nameField.sendKeys("Name1");
 	  categoryField.sendKeys("Category1");
-	  priceField.sendKeys("23");
+	  priceField.sendKeys("231");
 	  imageField.sendKeys("image.png");
 	  
 	  submitButton.click();
