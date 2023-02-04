@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher dispatcher=request.getRequestDispatcher("ProfileServlet");
                 dispatcher.forward(request, response);
             } else {
-            	RequestDispatcher rd=request.getRequestDispatcher("loginUnsuccessful.jsp");
+            	RequestDispatcher rd=request.getRequestDispatcher("loginunsuccessful.jsp");
             	 rd.forward(request, response);
             }
 		}
