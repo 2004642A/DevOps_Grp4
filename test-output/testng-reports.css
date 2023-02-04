@@ -1,9 +1,5 @@
 body {
-    margin: 0px 0px 5px 5px;
-}
 
-ul {
-    margin: 0px;
 }
 
 li {
@@ -41,19 +37,19 @@ a:hover {
 }
 
 .suite {
-    margin: 0px 10px 10px 0px;
+
     background-color: #fff8dc;
 }
 
 .suite-name {
     padding-left: 10px;
     font-size: 25px;
-    font-family: Times;
+
 }
 
 .main-panel-header {
     padding: 5px;
-    background-color: #9FB4D9; //afeeee;
+
     font-family: monospace;
     font-size: 18px;
 }
@@ -61,7 +57,7 @@ a:hover {
 .main-panel-content {
     padding: 5px;
     margin-bottom: 10px;
-    background-color: #DEE8FC; //d0ffff;
+
 }
 
 .rounded-window {
@@ -85,7 +81,7 @@ a:hover {
 
 .rounded-window-bottom {
     border-style: solid;
-    border-width: 0px 1px 1px 1px;
+
     border-bottom-right-radius: 10px 10px;
     border-bottom-left-radius: 10px 10px;
     overflow: auto;
@@ -98,8 +94,7 @@ a:hover {
 
 .method-content {
     border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    margin-bottom: 10;
+
     padding-bottom: 5px;
     width: 80%;
 }
@@ -114,7 +109,7 @@ a:hover {
     font-family: monospace;
     font-size: 12px;
     font-weight: bold;
-    margin-top: 0px;
+
     margin-left: 20px;
 }
 
@@ -135,8 +130,7 @@ a:hover {
     margin-top: 10px;
     width: 80%;
     border-style: solid;
-    border-width: 1px 0px 0px 0px;
-    font-family: Times;
+
     font-size: 18px;
     font-weight: bold;
 }
@@ -152,9 +146,7 @@ a:hover {
     left: 0;
     right: 0;
     padding: 5px;
-    margin: 0px 0px 5px 0px;
-    background-color: #0066ff;
-    font-family: Times;
+
     color: #fff;
     text-align: center;
 }
@@ -164,20 +156,20 @@ a:hover {
 }
 
 .test-name {
-    font-family: 'Lucida Grande';
+
     font-size: 16px;
 }
 
 .suite-icon {
     padding: 5px;
     float: right;
-    height: 20;
+
 }
 
 .test-group {
     font: 20px 'Lucida Grande';
     margin: 5px 5px 10px 5px;
-    border-width: 0px 0px 1px 0px;
+
     border-style: solid;
     padding: 5px;
 }
@@ -202,10 +194,7 @@ table.google-visualization-table-table {
 
 .reporter-method-output-div {
     padding: 5px;
-    margin: 0px 0px 5px 20px;
-    font-size: 12px;
-    font-family: monospace;
-    border-width: 0px 0px 0px 1px;
+
     border-style: solid;
 }
 
@@ -216,10 +205,12 @@ table.google-visualization-table-table {
 
 .ignored-methods-div {
     padding: 5px;
+
     margin: 0px 0px 5px 20px;
     font-size: 12px;
     font-family: monospace;
     border-width: 0px 0px 0px 1px;
+
     border-style: solid;
 }
 
@@ -227,7 +218,7 @@ table.google-visualization-table-table {
     border-top-left-radius: 10px 10px;
     border-bottom-left-radius: 10px 10px;
     border-style: solid;
-    border-width: 0px 0px 0px 10px;
+
     border-color: #f00;
 }
 
@@ -235,7 +226,7 @@ table.google-visualization-table-table {
     border-top-left-radius: 10px 10px;
     border-bottom-left-radius: 10px 10px;
     border-style: solid;
-    border-width: 0px 0px 0px 10px;
+
     border-color: #edc600;
 }
 
@@ -243,7 +234,7 @@ table.google-visualization-table-table {
     border-top-left-radius: 10px 10px;
     border-bottom-left-radius: 10px 10px;
     border-style: solid;
-    border-width: 0px 0px 0px 10px;
+
     border-color: #19f52d;
 }
 
@@ -277,9 +268,7 @@ table.google-visualization-table-table {
 }
 
 .chronological-class {
-    background-color: #0ccff;
-    border-style: solid;
-    border-width: 0px 0px 1px 1px;
+
 }
 
 .method-start {
@@ -287,7 +276,7 @@ table.google-visualization-table-table {
 }
 
 .chronological-class-name {
-    padding: 0px 0px 0px 5px;
+
     color: #008;
 }
 
@@ -298,7 +287,7 @@ table.google-visualization-table-table {
 
 .navigator-suite-header {
     font-size: 22px;
-    margin: 0px 10px 5px 0px;
+
     background-color: #deb887;
     text-align: center;
 }
