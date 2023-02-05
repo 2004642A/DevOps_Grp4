@@ -6,6 +6,7 @@
       <class name="NewTest1">
         <methods>
           <include name="afterTest"/>
+          <include name="checkId"/>
           <include name="checkTitle"/>
           <include name="beforeTest"/>
         </methods>
